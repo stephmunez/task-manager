@@ -13,10 +13,4 @@ app.get('/hello', (req, res) => {
 
 app.use('/api/v1/tasks', tasks);
 
-// app.get('/api/vi/tasks');
-// app.post('/api/vi/tasks');
-// app.post('/api/vi/tasks/:id');
-// app.patch('/api/vi/tasks/:id');
-// app.delete('/api/vi/tasks/:id');
-
 app.listen(port, console.log(`Server is listening on port ${port}`));
