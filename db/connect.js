@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 
-const uri =
-  'mongodb+srv://sjtmunez:XUuuXsB8PhGTTjob@cluster0.smfcsuw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-
 const connectDB = (url) => {
-  return mongoose.connect(uri, {
+  return mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
