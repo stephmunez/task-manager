@@ -5,8 +5,12 @@ const getAllTasks = (req, res) => {
 };
 
 const createTask = async (req, res) => {
-  const task = await Task.create(req.body);
-  res.json({ task });
+  try {
+    const task = await Task.create(req.body);
+    res.json({ task });
+  } catch (err) {
+    console.log(err.message);
+  }
 };
 const getTask = (req, res) => {
   res.json({ id: req.params.id });
