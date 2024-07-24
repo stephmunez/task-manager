@@ -7,9 +7,9 @@ const getAllTasks = (req, res) => {
 const createTask = async (req, res) => {
   try {
     const task = await Task.create(req.body);
-    res.json({ task });
-  } catch (err) {
-    console.log(err.message);
+    res.send({ task });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
   }
 };
 const getTask = (req, res) => {
